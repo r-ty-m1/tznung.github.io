@@ -1,0 +1,223 @@
+@charset "UTF-8";
+#header {
+
+}
+#header {
+    text-align: center;
+}
+#footer {
+}
+#content {
+}
+#logo {
+}
+.logo {
+    color: #FFFFFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 5px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
+}
+#copyright {
+    color: #646464;
+}
+body {
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 打字機區域 */
+.terminal {
+    max-width: 800px;
+    margin: 300px auto 500px;
+    text-align: left;
+}
+
+.terminal-line {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.terminal-prompt {
+    color: #FF0000;
+    margin-right: 10px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 18px;
+    background-color: #fff;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Logo 樣式 */
+.logo-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 0; /* 放在背景層 */
+}
+
+.logo-container img {
+    width: 400px; /* 放大一點作為背景 */
+    height: auto;
+    opacity: 0.5; /* 初始透明度 */
+}
+
+.small-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.small-logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* 快捷按鈕 */
+.nav-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+.nav-btn {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.nav-btn:hover {
+    color: #FF0000;
+}
+
+/* 內容區域 */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content {
+	max-width: 1500px;
+	text-align: center;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 2s ease, transform 2s ease;
+	background-image: url(url);
+}
+#section4 .content ul {
+    text-align: left;
+    line-height: 2;
+}
+
+.logo-img {
+	max-width: 100px;
+	max-height: 100px;
+	margin-right: 10px;
+	padding-top: 0px;
+}
+
+
+.content.visible {
+    opacity: 1;
+    transform: translateY(0);
+    font-family: "Noto Sans", "微軟正黑體 Light";
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: medium;
+}
+.logo-img-nuke {
+    max-width: 300px;
+    max-height: 100px;
+    margin-left: -10px;
+}
+
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+    line-height: 1;
+}
+.note {
+    opacity: 1;
+    color: #8B8B8B;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+
+/* 大頭貼樣式 */
+.profile-pic {
+	width: 250px; /* 調整大小 */
+	height: auto;
+	margin: 20px auto;
+	display: block;
+	transition: opacity 0.3s ease; /* 消失時的平滑過渡 */
+}
+
+.profile-pic.follow-mouse {
+    position: fixed; /* 改為 fixed 確保跟隨滑鼠 */
+    z-index: 1000;
+    pointer-events: none; /* 避免干擾滑鼠事件 */
+    opacity: 0.8; /* 略透明 */
+    transition: none; /* 移除過渡，確保移動順暢 */
+}
+
+/* 頁尾 */
+#footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+/* Next 按鍵樣式 */
+.next-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF0000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.next-btn:hover {
+    background-color: #cc0000;
+}
